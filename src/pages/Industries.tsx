@@ -14,7 +14,7 @@ export default function Industries() {
         eyebrow="Industries"
         titleLines={['Understanding the Context', 'Behind the Challenge.']}
         subtitle="Advisory informed by the operating environment in which decisions are made."
-        image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/industries.png"
       />
       <section id="content" className="page-section py-10 md:py-12">
         <div className="container-page relative overflow-hidden rounded-2xl border border-navy-900/10">

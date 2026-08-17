@@ -14,7 +14,7 @@ export default function InsuranceRiskAdvisory() {
         eyebrow="Insurance Risk Advisory"
         titleLines={['Insurance Should Protect', 'the Business.', 'Not Simply Complete the Checklist.']}
         subtitle="Designing protection around actual business risk."
-        image="https://images.unsplash.com/photo-1464938050520-ef265f458e50?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/insurance.png"
       />
       <section id="content" className="page-section py-14 md:py-16">
         <div className="container-page relative grid items-start gap-5 lg:grid-cols-12 lg:gap-6">

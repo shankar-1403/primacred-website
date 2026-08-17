@@ -5,8 +5,7 @@ import { SEO } from '@/components/ui/SEO'
 import { CTASection } from '@/components/sections/CTA'
 import { seo } from '@/data/seo'
 
-const firmImage =
-  'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80'
+const firmImage = '/images/pages/about-firm.png'
 
 export default function About() {
   return (
@@ -16,7 +15,7 @@ export default function About() {
         eyebrow="About"
         titleLines={['A Different Perspective', 'on Advisory.']}
         subtitle="Financial strength. Risk intelligence. Strategic clarity."
-        image="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/about.png"
       />
       <section id="content" className="bg-white py-14 md:py-16">
         <div className="container-page">

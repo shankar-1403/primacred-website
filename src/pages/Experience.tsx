@@ -14,7 +14,7 @@ export default function Experience() {
         eyebrow="Experience"
         titleLines={['Experience Across', 'Complex Business Environments.']}
         subtitle="Advisory shaped by real-world complexity."
-        image="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/experience.png"
       />
       <section id="content" className="page-section py-14 md:py-16">
         <div className="container-page relative">

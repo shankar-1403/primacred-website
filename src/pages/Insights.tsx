@@ -25,7 +25,7 @@ export default function Insights() {
         eyebrow="Insights"
         titleLines={['Perspectives That Help', 'Businesses Think Ahead.']}
         subtitle="Placeholder articles for editorial structure. These are not published opinions or client case studies."
-        image="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/insights.png"
       />
       <section id="content" className="page-section py-14 md:py-16">
         <div className="container-page relative">

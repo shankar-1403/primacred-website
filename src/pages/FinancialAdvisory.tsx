@@ -14,7 +14,7 @@ export default function FinancialAdvisory() {
         eyebrow="Financial Advisory"
         titleLines={['Strengthening the', 'Financial Foundations', 'of Business.']}
         subtitle="Strategic financial advice for businesses navigating change, complexity and growth."
-        image="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/financial.png"
       />
       <section id="content" className="page-section py-14 md:py-16">
         <div className="container-page relative grid items-start gap-5 lg:grid-cols-12 lg:gap-6">

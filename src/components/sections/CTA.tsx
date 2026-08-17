@@ -4,8 +4,7 @@ import { routes } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
 import { AtmosphericImage } from '@/components/ui/AtmosphericImage'
 
-const ctaImage =
-  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=80'
+const ctaImage = '/images/sections/cta.png'
 
 export function CTASection() {
   return (

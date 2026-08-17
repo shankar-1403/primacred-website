@@ -5,8 +5,7 @@ import { AtmosphericImage } from '@/components/ui/AtmosphericImage'
 import { principles } from '@/data/methodology'
 import { routes } from '@/data/site'
 
-const sectionImage =
-  'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80'
+const sectionImage = '/images/sections/why.png'
 
 export function WhyPrimacredSection() {
   return (

@@ -14,7 +14,7 @@ export default function UnderwritingAdvisory() {
         eyebrow="Underwriting Advisory"
         titleLines={['Better Risk Understanding.', 'Better Underwriting Decisions.']}
         subtitle="Structured analysis for informed underwriting."
-        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/underwriting.png"
       />
       <section id="content" className="page-section py-14 md:py-16">
         <div className="container-page relative">

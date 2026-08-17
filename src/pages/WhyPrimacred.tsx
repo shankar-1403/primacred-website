@@ -22,7 +22,7 @@ export default function WhyPrimacred() {
         eyebrow="Why PRIMACRED"
         titleLines={['Advisory With Perspective.']}
         subtitle="Because the right answer starts with the right question."
-        image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/why.png"
       />
       <section id="content" className="page-section py-14 md:py-16">
         <div className="container-page relative space-y-3">

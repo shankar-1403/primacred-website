@@ -6,8 +6,7 @@ import { ContactForm } from '@/components/ui/ContactForm'
 import { services } from '@/data/services'
 import { seo } from '@/data/seo'
 
-const contactImage =
-  'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80'
+const contactImage = '/images/pages/contact.png'
 
 export default function Contact() {
   return (
@@ -18,7 +17,7 @@ export default function Contact() {
         titleLines={["Let's Talk About", 'What Comes Next.']}
         subtitle="Every business challenge starts with a conversation."
         compact
-        image="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/contact.png"
       />
       <section id="content" className="bg-white py-14 md:py-16">
         <div className="container-page grid gap-3 sm:gap-4 lg:grid-cols-12 lg:items-stretch">

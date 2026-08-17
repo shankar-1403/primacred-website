@@ -14,7 +14,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         titleLines={['Our Advisory Platform']}
         subtitle="Integrated expertise for complex business requirements."
-        image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/services.png"
       />
       <section id="content" className="page-section py-14 md:py-16">
         <div className="container-page relative">

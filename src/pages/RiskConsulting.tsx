@@ -14,7 +14,7 @@ export default function RiskConsulting() {
         eyebrow="Risk Consulting"
         titleLines={['Risk Is Not Simply a Constraint.', 'It Is a Strategic Variable.']}
         subtitle="Understand risk before it becomes disruption."
-        image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/risk.png"
       />
       <section id="content" className="page-section py-14 md:py-16">
         <div className="container-page relative space-y-8">

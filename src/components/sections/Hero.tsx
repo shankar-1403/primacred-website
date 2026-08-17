@@ -13,32 +13,28 @@ const ROTATE_MS = 6000
 const slides = [
   {
     id: 'capital',
-    image:
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=80',
+    image: '/images/hero/capital.png',
     alt: 'Modern corporate architecture and financial district skyline',
     eyebrow: 'Finance · Risk · Growth',
     caption: 'Advisory for businesses navigating complexity.',
   },
   {
     id: 'infrastructure',
-    image:
-      'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=2400&q=80',
+    image: '/images/hero/infrastructure.png',
     alt: 'Large-scale infrastructure and engineering project',
     eyebrow: 'Complex environments',
     caption: 'Experience across infrastructure and engineering.',
   },
   {
     id: 'strategy',
-    image:
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2400&q=80',
+    image: '/images/hero/strategy.png',
     alt: 'Contemporary corporate office and strategic workspace',
     eyebrow: 'Strategic clarity',
     caption: 'Financial strength. Risk intelligence. Strategic clarity.',
   },
   {
     id: 'growth',
-    image:
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2400&q=80',
+    image: '/images/hero/growth.png',
     alt: 'Financial planning and business strategy environment',
     eyebrow: 'Sustainable growth',
     caption: 'Building stronger foundations for the road ahead.',

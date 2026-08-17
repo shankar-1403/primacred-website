@@ -16,38 +16,32 @@ type StageCardConfig = {
 const stageCards: StageCardConfig[] = [
   {
     layout: 'md:col-span-5 md:row-span-2',
-    image:
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/methodology/discover.png',
     imageAlt: 'Discovery workshop and client consultation',
   },
   {
     layout: 'md:col-span-4 md:col-start-6',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+    image: '/images/methodology/assess.png',
     imageAlt: 'Financial assessment and data review',
   },
   {
     layout: 'md:col-span-3 md:col-start-10',
-    image:
-      'https://images.unsplash.com/photo-1464938050520-ef265f458e50?auto=format&fit=crop&w=800&q=80',
+    image: '/images/methodology/analyse.png',
     imageAlt: 'Analysis of market and risk exposures',
   },
   {
     layout: 'md:col-span-7 md:col-start-6 md:row-start-2',
-    image:
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/methodology/advise.png',
     imageAlt: 'Strategic advisory session',
   },
   {
     layout: 'md:col-span-5 md:row-start-3',
-    image:
-      'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1000&q=80',
+    image: '/images/methodology/implement.png',
     imageAlt: 'Implementation and structured engagement',
   },
   {
     layout: 'md:col-span-7 md:col-start-6 md:row-start-3',
-    image:
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/methodology/monitor.png',
     imageAlt: 'Long-term monitoring and resilience planning',
   },
 ]
@@ -105,7 +99,7 @@ export default function Methodology() {
         eyebrow="Methodology"
         titleLines={['From Complexity', 'to Clarity.']}
         subtitle="A disciplined six-stage approach to advisory."
-        image="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=80"
+        image="/images/pages/methodology.png"
       />
       <section id="content" className="bg-white py-14 md:py-16">
         <div className="container-page grid gap-3 sm:gap-4 md:grid-cols-12 md:grid-rows-3">
