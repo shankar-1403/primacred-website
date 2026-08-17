@@ -7,6 +7,7 @@ import {
   TrendingUp,
 } from 'lucide-react'
 import { Reveal } from '@/components/ui/Reveal'
+import { AtmosphericImage } from '@/components/ui/AtmosphericImage'
 import { services } from '@/data/services'
 import { routes } from '@/data/site'
 import { cn } from '@/lib/cn'
@@ -48,97 +49,113 @@ const cardThemes: Record<
   },
 }
 
+const sectionImage =
+  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80'
+
 export function AdvisoryIntro() {
   return (
-    <section className="relative overflow-hidden py-12 md:py-14" id="content">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,#f7f8fa_0%,#eef1f5_45%,#faf6ef_100%)]" />
-      <div className="pointer-events-none absolute -left-20 top-0 size-64 rounded-full bg-gold/15 blur-3xl" />
-      <div className="pointer-events-none absolute -right-16 bottom-0 size-72 rounded-full bg-navy-900/10 blur-3xl" />
+    <section
+      className="relative overflow-hidden bg-white py-12 md:py-14"
+      id="content"
+    >
+      <div className="container-page grid items-stretch gap-4 lg:grid-cols-2 lg:gap-5">
+          {/* Left — service cards */}
+          <div className="order-2 grid grid-cols-2 grid-rows-2 gap-3 sm:gap-4 lg:order-1">
+            {services.map((service, index) => {
+              const Icon = icons[service.id] ?? TrendingUp
+              const theme =
+                cardThemes[service.id] ?? cardThemes['financial-advisory']
 
-      <div className="container-page relative grid items-stretch gap-5 lg:grid-cols-[minmax(0,0.95fr)_1.05fr] lg:gap-6">
-        <Reveal>
-          <div className="relative overflow-hidden rounded-2xl bg-navy-900 p-6 shadow-[0_16px_48px_rgba(15,33,64,0.18)] md:p-7">
-            <div
-              className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(212,188,150,0.14)_0%,transparent_55%)]"
-              aria-hidden
-            />
-            <div
-              className="pointer-events-none absolute -right-10 -top-10 size-36 rounded-full bg-gold/20 blur-2xl"
-              aria-hidden
-            />
-            <div
-              className="pointer-events-none absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-gold via-gold-soft to-transparent"
-              aria-hidden
-            />
-
-            <p className="relative label-caps text-gold-soft">Advisory</p>
-            <h2 className="relative display-title mt-2 text-balance text-[clamp(1.75rem,3.2vw,2.35rem)] text-white">
-              Advisory that moves business forward.
-            </h2>
-            <p className="relative mt-3 max-w-md text-sm leading-relaxed text-white/70">
-              Clarity for complex decisions. Confidence for the road ahead. As
-              businesses expand, financial structures evolve and risks become
-              interconnected.
-            </p>
-            <Link
-              to={routes.services}
-              className="group relative mt-5 inline-flex items-center gap-1.5 rounded-lg bg-gold/15 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-gold-soft transition-colors hover:bg-gold/25 hover:text-white"
-            >
-              All services
-              <ArrowRight
-                className="size-3.5 transition-transform group-hover:translate-x-0.5"
-                strokeWidth={2}
-              />
-            </Link>
-          </div>
-        </Reveal>
-
-        <div className="grid gap-2.5 sm:grid-cols-2">
-          {services.map((service, index) => {
-            const Icon = icons[service.id] ?? TrendingUp
-            const theme = cardThemes[service.id] ?? cardThemes['financial-advisory']
-
-            return (
-              <Reveal key={service.id} delay={0.05 + index * 0.04}>
-                <Link
-                  to={service.href}
-                  className={cn(
-                    'group flex h-full gap-3 rounded-xl border p-4 transition-all duration-300',
-                    theme.card,
-                    theme.hover,
-                  )}
+              return (
+                <Reveal
+                  key={service.id}
+                  className="h-full"
+                  delay={0.05 + index * 0.04}
                 >
-                  <span
+                  <Link
+                    to={service.href}
                     className={cn(
-                      'flex size-9 shrink-0 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-105',
-                      theme.icon,
+                      'group flex h-full min-h-[148px] flex-col rounded-xl border p-4 shadow-soft transition-all duration-300 sm:min-h-[168px] sm:p-5',
+                      theme.card,
+                      theme.hover,
                     )}
                   >
-                    <Icon className="size-4" strokeWidth={1.75} />
-                  </span>
-                  <div className="min-w-0 flex-1">
                     <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-sm font-semibold leading-snug text-navy-900">
-                        {service.title}
-                      </h3>
                       <span
                         className={cn(
-                          'stat-number shrink-0 text-lg leading-none',
+                          'flex size-10 shrink-0 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-105',
+                          theme.icon,
+                        )}
+                      >
+                        <Icon className="size-4" strokeWidth={1.75} />
+                      </span>
+                      <span
+                        className={cn(
+                          'stat-number text-xl leading-none',
                           theme.number,
                         )}
                       >
                         {service.number}
                       </span>
                     </div>
-                    <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-stone-600">
-                      {service.description}
-                    </p>
-                  </div>
+                    <div className="mt-4 flex flex-1 flex-col">
+                      <h3 className="text-sm font-semibold leading-snug text-navy-900 sm:text-[0.9375rem]">
+                        {service.title}
+                      </h3>
+                      <p className="mt-2 text-xs leading-relaxed text-stone-600 sm:text-sm">
+                        {service.description}
+                      </p>
+                    </div>
+                  </Link>
+                </Reveal>
+              )
+            })}
+          </div>
+
+          {/* Right — image with intro overlay */}
+          <Reveal
+            className="relative order-1 lg:order-2"
+            delay={0.08}
+          >
+            <div className="relative isolate min-h-[300px] overflow-hidden rounded-2xl border border-line-light shadow-soft sm:min-h-[340px] lg:min-h-[420px]">
+              <AtmosphericImage
+                src={sectionImage}
+                alt="Financial strategy and business advisory environment"
+                className="absolute inset-0 size-full object-cover"
+                fetchPriority="high"
+              />
+              <div
+                className="hero-carousel-overlay absolute inset-0"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-gold via-gold-soft to-transparent"
+                aria-hidden
+              />
+
+              <div className="relative flex size-full min-h-[300px] flex-col justify-end p-6 sm:min-h-[340px] sm:p-7 lg:min-h-[420px]">
+                <p className="label-caps text-gold-soft">Advisory</p>
+                <h2 className="display-title mt-2 max-w-sm text-balance text-[clamp(1.65rem,3vw,2.15rem)] text-white">
+                  Advisory that moves business forward.
+                </h2>
+                <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/75 sm:text-[0.9375rem]">
+                  Clarity for complex decisions. Confidence for the road ahead.
+                  As businesses expand, financial structures evolve and risks
+                  become interconnected.
+                </p>
+                <Link
+                  to={routes.services}
+                  className="group mt-5 inline-flex w-fit items-center gap-1.5 rounded-lg bg-gold/15 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-gold-soft transition-colors hover:bg-gold/25 hover:text-white"
+                >
+                  All services
+                  <ArrowRight
+                    className="size-3.5 transition-transform group-hover:translate-x-0.5"
+                    strokeWidth={2}
+                  />
                 </Link>
-              </Reveal>
-            )
-          })}
-        </div>
+              </div>
+            </div>
+          </Reveal>
       </div>
     </section>
   )

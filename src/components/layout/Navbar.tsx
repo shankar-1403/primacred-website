@@ -34,7 +34,7 @@ export function Navbar() {
       className={cn(
         'fixed inset-x-0 top-0 z-50 transition-all duration-300',
         scrolled || open
-          ? 'border-b border-line-light bg-white/95 shadow-nav backdrop-blur-xl'
+          ? 'bg-white/95 shadow-nav backdrop-blur-xl'
           : 'bg-white/80 backdrop-blur-lg',
       )}
     >
@@ -73,6 +73,8 @@ export function Navbar() {
           </button>
         </div>
       </div>
+
+      <div className="header-glow-line" aria-hidden />
 
       <AnimatePresence>
         {open ? (

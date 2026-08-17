@@ -43,7 +43,7 @@ function validate(values: Fields): Errors {
   return errors
 }
 
-export function ContactForm() {
+export function ContactForm({ embedded = false }: { embedded?: boolean }) {
   const [values, setValues] = useState<Fields>(initial)
   const [errors, setErrors] = useState<Errors>({})
   const [status, setStatus] = useState<Status>('idle')
@@ -80,10 +80,7 @@ export function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div
-        className="surface-elevated rounded-2xl px-8 py-12"
-        role="status"
-      >
+      <div className={embedded ? '' : 'surface-elevated rounded-2xl px-8 py-12'} role="status">
         <p className="label-caps text-gold-dim">Enquiry received</p>
         <h3 className="display-title mt-4 text-2xl text-navy-900">Thank you.</h3>
         <p className="mt-4 max-w-md leading-relaxed text-stone-600">
@@ -102,40 +99,50 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="surface-elevated space-y-6 rounded-2xl p-8 md:p-10">
-      <Field
-        label="Name"
-        name="name"
-        value={values.name}
-        error={errors.name}
-        onChange={update}
-        autoComplete="name"
-      />
-      <Field
-        label="Organisation"
-        name="organisation"
-        value={values.organisation}
-        error={errors.organisation}
-        onChange={update}
-        autoComplete="organization"
-      />
-      <Field
-        label="Designation"
-        name="designation"
-        value={values.designation}
-        error={errors.designation}
-        onChange={update}
-        autoComplete="organization-title"
-      />
-      <Field
-        label="Email Address"
-        name="email"
-        type="email"
-        value={values.email}
-        error={errors.email}
-        onChange={update}
-        autoComplete="email"
-      />
+    <form
+      onSubmit={onSubmit}
+      noValidate
+      className={cn(
+        embedded ? 'space-y-5' : 'surface-elevated space-y-6 rounded-2xl p-8 md:p-10',
+      )}
+    >
+      <div className="grid gap-5 md:grid-cols-2">
+        <Field
+          label="Name"
+          name="name"
+          value={values.name}
+          error={errors.name}
+          onChange={update}
+          autoComplete="name"
+        />
+        <Field
+          label="Organisation"
+          name="organisation"
+          value={values.organisation}
+          error={errors.organisation}
+          onChange={update}
+          autoComplete="organization"
+        />
+      </div>
+      <div className="grid gap-5 md:grid-cols-2">
+        <Field
+          label="Designation"
+          name="designation"
+          value={values.designation}
+          error={errors.designation}
+          onChange={update}
+          autoComplete="organization-title"
+        />
+        <Field
+          label="Email Address"
+          name="email"
+          type="email"
+          value={values.email}
+          error={errors.email}
+          onChange={update}
+          autoComplete="email"
+        />
+      </div>
       <Field
         label="Phone Number"
         name="phone"
@@ -189,9 +196,10 @@ function Field({
   const id = `field-${name}`
   const describedBy = error ? `${id}-error` : undefined
   const fieldClass = cn(
-    'w-full rounded-lg border bg-white px-4 py-3 text-navy-900 placeholder:text-stone-400 focus:ring-2 focus:ring-gold/30 focus:outline-none',
-    error ? 'border-red-400' : 'border-line-light focus:border-gold',
+    'w-full rounded-none border-0 border-b bg-transparent px-0 py-2.5 text-navy-900 placeholder:text-stone-400 focus:outline-none focus:ring-0',
+    error ? 'border-red-400' : 'border-stone-300 focus:border-gold',
   )
+  const textareaClass = fieldClass
 
   return (
     <div>
@@ -206,7 +214,7 @@ function Field({
           value={value}
           aria-invalid={Boolean(error)}
           aria-describedby={describedBy}
-          className={cn(fieldClass, 'mt-2 resize-y')}
+          className={cn(textareaClass, 'mt-2 resize-y')}
           onChange={(event) => onChange(name, event.target.value)}
         />
       ) : (

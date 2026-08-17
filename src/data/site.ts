@@ -24,13 +24,13 @@ export const routes = {
 } as const
 
 export const navLinks = [
+  { label: 'Home', href: routes.home },
   { label: 'About', href: routes.about },
   { label: 'Services', href: routes.services },
   { label: 'Experience', href: routes.experience },
   { label: 'Industries', href: routes.industries },
   { label: 'Methodology', href: routes.methodology },
   { label: 'Insights', href: routes.insights },
-  { label: 'Contact', href: routes.contact },
 ] as const
 
 export const footerNav = navLinks

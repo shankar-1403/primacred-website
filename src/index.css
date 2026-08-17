@@ -159,10 +159,34 @@
     background-size: 32px 32px;
   }
 
+  .header-glow-line {
+    flex-shrink: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgb(184 149 106) 0%,
+      rgb(184 149 106 / 0.55) 45%,
+      transparent 100%
+    );
+  }
+
   .hero-carousel-overlay {
     background:
       linear-gradient(to right, rgba(7, 20, 40, 0.88) 0%, rgba(7, 20, 40, 0.72) 42%, rgba(7, 20, 40, 0.35) 70%, rgba(7, 20, 40, 0.2) 100%),
       linear-gradient(to top, rgba(7, 20, 40, 0.55) 0%, transparent 40%);
+  }
+
+  .cta-banner-overlay {
+    background:
+      linear-gradient(
+        to right,
+        rgba(7, 20, 40, 0.94) 0%,
+        rgba(7, 20, 40, 0.82) 38%,
+        rgba(15, 33, 64, 0.65) 68%,
+        rgba(15, 33, 64, 0.5) 100%
+      ),
+      linear-gradient(to top, rgba(7, 20, 40, 0.45) 0%, transparent 45%);
   }
 
   .hero-carousel-grid {

@@ -1,76 +1,73 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/ui/Reveal'
+import { AtmosphericImage } from '@/components/ui/AtmosphericImage'
 import { principles } from '@/data/methodology'
 import { routes } from '@/data/site'
-import { cn } from '@/lib/cn'
 
-const themes = [
-  {
-    card: 'border-gold/25 bg-gradient-to-br from-[#faf6ef] to-white hover:border-gold/45',
-    number: 'text-gold/50',
-  },
-  {
-    card: 'border-navy-900/15 bg-gradient-to-br from-[#eef2f8] to-white hover:border-navy-900/25',
-    number: 'text-navy-900/25',
-  },
-  {
-    card: 'border-navy-700/20 bg-gradient-to-br from-[#e8edf5] to-white hover:border-navy-700/35',
-    number: 'text-navy-700/30',
-  },
-  {
-    card: 'border-gold-dim/25 bg-gradient-to-br from-[#f3ebe0] to-white hover:border-gold-dim/40',
-    number: 'text-gold-dim/45',
-  },
-  {
-    card: 'border-gold/20 bg-gradient-to-br from-[#f7f3ec] to-white hover:border-gold/40',
-    number: 'text-gold/40',
-  },
-] as const
+const sectionImage =
+  'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80'
 
 export function WhyPrimacredSection() {
   return (
-    <section className="page-section py-14 md:py-16">
-      <div className="container-page relative">
-        <Reveal>
-          <p className="label-caps text-gold-dim">Why PRIMACRED</p>
-          <h2 className="display-title mt-3 max-w-2xl text-[clamp(1.75rem,3.5vw,2.5rem)] text-navy-900">
-            Advisory with perspective.
-          </h2>
-          <p className="mt-3 max-w-lg text-sm text-stone-600 md:text-base">
-            Because the right answer starts with the right question.
-          </p>
-        </Reveal>
+    <section className="border-t border-line-light bg-white py-10 md:py-12">
+      <div className="container-page">
+        <div className="grid items-start gap-6 lg:grid-cols-12 lg:gap-8">
+          {/* Image */}
+          <Reveal className="lg:col-span-5">
+            <div className="overflow-hidden rounded-xl border border-line-light shadow-soft">
+              <AtmosphericImage
+                src={sectionImage}
+                alt="Modern corporate workspace representing strategic advisory"
+                className="aspect-[5/4] w-full object-cover md:aspect-[4/5] lg:aspect-auto lg:min-h-[420px]"
+              />
+            </div>
+          </Reveal>
 
-        <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-          {principles.map((principle, index) => {
-            const theme = themes[index % themes.length]
-            return (
-              <Reveal key={principle.number} delay={index * 0.05}>
-                <Link
-                  to={routes.whyPrimacred}
-                  className={cn(
-                    'group block h-full rounded-xl border p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-card md:p-6',
-                    theme.card,
-                  )}
-                >
-                  <span className={cn('stat-number text-2xl', theme.number)}>
-                    {principle.number}
-                  </span>
-                  <h3 className="mt-3 text-base font-semibold text-navy-900">
-                    {principle.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-stone-600">
-                    {principle.copy}
-                  </p>
-                  <ArrowRight
-                    className="mt-4 size-4 text-gold opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100"
-                    strokeWidth={2}
-                  />
-                </Link>
-              </Reveal>
-            )
-          })}
+          {/* Content */}
+          <div className="lg:col-span-7">
+            <Reveal className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div className="max-w-lg">
+                <p className="label-caps text-gold-dim">Why PRIMACRED</p>
+                <h2 className="display-title mt-2 text-[clamp(1.45rem,2.6vw,1.85rem)] text-navy-900">
+                  Advisory with perspective.
+                </h2>
+                <p className="mt-2 text-sm text-stone-600">
+                  Because the right answer starts with the right question.
+                </p>
+              </div>
+              <Link
+                to={routes.whyPrimacred}
+                className="group inline-flex shrink-0 items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-navy-900 hover:text-gold-dim"
+              >
+                Learn more
+                <ArrowRight
+                  className="size-3.5 transition-transform group-hover:translate-x-0.5"
+                  strokeWidth={2}
+                />
+              </Link>
+            </Reveal>
+
+            <ul className="mt-5 grid md:grid-cols-2 md:gap-x-8">
+              {principles.map((principle) => (
+                <Reveal key={principle.number}>
+                  <li className="flex gap-3 border-t border-line-light py-3 md:py-3.5">
+                    <span className="stat-number shrink-0 text-sm text-gold/50">
+                      {principle.number}
+                    </span>
+                    <div className="min-w-0">
+                      <h3 className="text-sm font-semibold text-navy-900">
+                        {principle.title}
+                      </h3>
+                      <p className="mt-0.5 text-xs leading-relaxed text-stone-600">
+                        {principle.copy}
+                      </p>
+                    </div>
+                  </li>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
