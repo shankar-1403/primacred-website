@@ -80,9 +80,9 @@ export function ContactForm({ embedded = false }: { embedded?: boolean }) {
 
   if (status === 'success') {
     return (
-      <div className={embedded ? '' : 'surface-elevated rounded-2xl px-8 py-12'} role="status">
-        <p className="label-caps text-gold-dim">Enquiry received</p>
-        <h3 className="display-title mt-4 text-2xl text-navy-900">Thank you.</h3>
+      <div className={embedded ? '' : 'rounded-3xl border border-line-light bg-white shadow-card rounded-2xl px-8 py-12'} role="status">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-dim">Enquiry received</p>
+        <h3 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-4 text-2xl text-navy-900">Thank you.</h3>
         <p className="mt-4 max-w-md leading-relaxed text-stone-600">
           Your enquiry has been recorded. A member of the advisory team will
           respond in due course.
@@ -103,7 +103,7 @@ export function ContactForm({ embedded = false }: { embedded?: boolean }) {
       onSubmit={onSubmit}
       noValidate
       className={cn(
-        embedded ? 'space-y-5' : 'surface-elevated space-y-6 rounded-2xl p-8 md:p-10',
+        embedded ? 'space-y-5' : 'rounded-3xl border border-line-light bg-white shadow-card space-y-6 rounded-2xl p-8 md:p-10',
       )}
     >
       <div className="grid gap-5 md:grid-cols-2">
@@ -203,7 +203,7 @@ function Field({
 
   return (
     <div>
-      <label htmlFor={id} className="label-caps text-stone-500">
+      <label htmlFor={id} className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-500">
         {label}
       </label>
       {multiline ? (

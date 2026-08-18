@@ -15,7 +15,7 @@ export function ProcessTimeline({
     <ol
       className={cn(
         horizontal
-          ? 'no-scrollbar hidden md:flex md:gap-6 md:overflow-x-auto xl:grid xl:grid-cols-7 xl:gap-0 xl:overflow-visible'
+          ? '[-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden hidden md:flex md:gap-6 md:overflow-x-auto xl:grid xl:grid-cols-7 xl:gap-0 xl:overflow-visible'
           : 'flex flex-col md:hidden',
       )}
     >
@@ -24,7 +24,7 @@ export function ProcessTimeline({
           key={step}
           className="relative flex min-w-[160px] flex-col rounded-xl border border-line-light bg-white p-4 md:min-h-[220px] md:border-0 md:bg-transparent md:p-3"
         >
-          <span className="stat-number text-2xl text-gold-dim">
+          <span className="font-sans font-bold tabular-nums tracking-[-0.04em] text-2xl text-gold-dim">
             {String(index + 1).padStart(2, '0')}
           </span>
           <h3 className="mt-3 text-base font-semibold leading-snug text-navy-900 md:text-lg">

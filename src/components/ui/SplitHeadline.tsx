@@ -19,7 +19,7 @@ export function SplitHeadline({
   const reduce = useReducedMotion()
 
   return (
-    <Tag className={cn('display-title', className)}>
+    <Tag className={cn('font-sans font-semibold leading-tight tracking-[-0.035em]', className)}>
       {lines.map((line, index) => (
         <span key={line} className="block overflow-hidden">
           {reduce ? (

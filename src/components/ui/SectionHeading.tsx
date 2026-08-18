@@ -28,7 +28,7 @@ export function SectionHeading({
           {eyebrow}
         </span>
       ) : null}
-      <h2 className="display-title text-[clamp(1.875rem,3.5vw,2.75rem)] text-balance text-navy-900">
+      <h2 className="font-sans font-semibold leading-tight tracking-[-0.035em] text-[clamp(1.875rem,3.5vw,2.75rem)] text-balance text-navy-900">
         {title}
       </h2>
       {subtitle ? (

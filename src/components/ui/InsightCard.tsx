@@ -40,12 +40,12 @@ export function InsightCard({ insight }: { insight: Insight }) {
     >
       <span className={cn('absolute inset-y-0 left-0 w-1', theme.bar)} aria-hidden />
       <div className="flex items-center justify-between gap-3 pl-2">
-        <p className={cn('label-caps', theme.text)}>{insight.category}</p>
+        <p className={cn('text-xs font-semibold uppercase tracking-[0.16em]', theme.text)}>{insight.category}</p>
         {insight.placeholder ? (
-          <span className="label-caps text-stone-400">Placeholder</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-stone-400">Placeholder</span>
         ) : null}
       </div>
-      <h3 className="display-title mt-4 pl-2 text-xl leading-snug text-navy-900 md:text-2xl">
+      <h3 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-4 pl-2 text-xl leading-snug text-navy-900 md:text-2xl">
         {insight.title}
       </h3>
       <p className="mt-3 flex-1 pl-2 text-sm leading-relaxed text-stone-600">

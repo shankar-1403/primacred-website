@@ -5,12 +5,12 @@ import { AtmosphericImage } from '@/components/ui/AtmosphericImage'
 import { principles } from '@/data/methodology'
 import { routes } from '@/data/site'
 
-const sectionImage = '/images/sections/why.png'
+const sectionImage = '/images/sections/why_prima.webp'
 
 export function WhyPrimacredSection() {
   return (
     <section className="border-t border-line-light bg-white py-10 md:py-12">
-      <div className="container-page">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12">
         <div className="grid items-start gap-6 lg:grid-cols-12 lg:gap-8">
           {/* Image */}
           <Reveal className="lg:col-span-5">
@@ -18,7 +18,7 @@ export function WhyPrimacredSection() {
               <AtmosphericImage
                 src={sectionImage}
                 alt="Modern corporate workspace representing strategic advisory"
-                className="aspect-[5/4] w-full object-cover md:aspect-[4/5] lg:aspect-auto lg:min-h-[420px]"
+                className="aspect-5/4 w-full object-cover md:aspect-4/5 lg:aspect-auto lg:min-h-100"
               />
             </div>
           </Reveal>
@@ -27,8 +27,8 @@ export function WhyPrimacredSection() {
           <div className="lg:col-span-7">
             <Reveal className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div className="max-w-lg">
-                <p className="label-caps text-gold-dim">Why PRIMACRED</p>
-                <h2 className="display-title mt-2 text-[clamp(1.45rem,2.6vw,1.85rem)] text-navy-900">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-dim">Why PRIMACRED</p>
+                <h2 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-2 text-[clamp(1.45rem,2.6vw,1.85rem)] text-navy-900">
                   Advisory with perspective.
                 </h2>
                 <p className="mt-2 text-sm text-stone-600">
@@ -51,7 +51,7 @@ export function WhyPrimacredSection() {
               {principles.map((principle) => (
                 <Reveal key={principle.number}>
                   <li className="flex gap-3 border-t border-line-light py-3 md:py-3.5">
-                    <span className="stat-number shrink-0 text-sm text-gold/50">
+                    <span className="font-sans font-bold tabular-nums tracking-[-0.04em] shrink-0 text-sm text-gold/50">
                       {principle.number}
                     </span>
                     <div className="min-w-0">

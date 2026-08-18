@@ -5,7 +5,7 @@ export function HeroFinanceVisual() {
 
   return (
     <div className="relative size-full min-h-[340px] overflow-hidden rounded-3xl bg-navy-900 md:min-h-[480px]">
-      <div className="hero-finance-grid pointer-events-none absolute inset-0 opacity-40" />
+      <div className="bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none absolute inset-0 opacity-40" />
       <div className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-gold/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-16 -left-10 size-56 rounded-full bg-white/5 blur-2xl" />
 
@@ -115,7 +115,7 @@ export function HeroFinanceVisual() {
       </div>
 
       <div className="absolute bottom-8 left-1/2 w-[calc(100%-3rem)] max-w-xs -translate-x-1/2 rounded-xl border border-gold/30 bg-navy-800/80 px-5 py-4 backdrop-blur-md">
-        <p className="text-center text-quote text-lg text-white/90">
+        <p className="text-center font-serif italic font-normal leading-[1.45] text-lg text-white/90">
           Make better decisions. Build stronger businesses.
         </p>
       </div>

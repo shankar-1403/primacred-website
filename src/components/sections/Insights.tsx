@@ -48,10 +48,10 @@ function InsightCard({ insight, index }: { insight: Insight; index: number }) {
       />
 
       <div className="flex items-center justify-between gap-2 pl-2">
-        <span className={cn('label-caps text-[0.65rem]', theme.text)}>
+        <span className={cn('text-xs font-semibold uppercase tracking-[0.16em] text-[0.65rem]', theme.text)}>
           {insight.category}
         </span>
-        <span className="stat-number text-sm text-navy-900/20">
+        <span className="font-sans font-bold tabular-nums tracking-[-0.04em] text-sm text-navy-900/20">
           {String(index + 1).padStart(2, '0')}
         </span>
       </div>
@@ -75,12 +75,12 @@ export function InsightsTeaser() {
   const featured = insights.slice(0, 3)
 
   return (
-    <section className="page-section py-12 md:py-14">
-      <div className="container-page relative">
+    <section className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#f7f8fa_0%,#eef1f5_48%,#faf6ef_100%)] before:pointer-events-none before:absolute before:-left-20 before:top-0 before:size-64 before:rounded-full before:bg-gold/14 before:blur-[64px] before:content-[''] after:pointer-events-none after:absolute after:-right-16 after:bottom-0 after:size-72 after:rounded-full after:bg-navy-900/8 after:blur-[64px] after:content-[''] py-12 md:py-14">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 relative">
         <Reveal className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-xl">
-            <p className="label-caps text-gold-dim">Insights</p>
-            <h2 className="display-title mt-2 text-[clamp(1.5rem,2.8vw,2rem)] text-navy-900">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-dim">Insights</p>
+            <h2 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-2 text-[clamp(1.5rem,2.8vw,2rem)] text-navy-900">
               Perspectives That Help Businesses Think Ahead.
             </h2>
           </div>

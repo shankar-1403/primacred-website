@@ -47,13 +47,13 @@ export function Ecosystem() {
   }, [advance, paused, reduce, active])
 
   return (
-    <section className="page-section py-14 md:py-16">
-      <div className="pointer-events-none absolute inset-0 grid-modern opacity-40" />
+    <section className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#f7f8fa_0%,#eef1f5_48%,#faf6ef_100%)] before:pointer-events-none before:absolute before:-left-20 before:top-0 before:size-64 before:rounded-full before:bg-gold/14 before:blur-[64px] before:content-[''] after:pointer-events-none after:absolute after:-right-16 after:bottom-0 after:size-72 after:rounded-full after:bg-navy-900/8 after:blur-[64px] after:content-[''] py-14 md:py-16">
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(15,33,64,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,33,64,0.03)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_80%_70%_at_50%_40%,black_20%,transparent_100%)] opacity-40" />
 
-      <div className="container-page relative grid items-start gap-8 lg:grid-cols-12 lg:gap-10">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 relative grid items-start gap-8 lg:grid-cols-12 lg:gap-10">
         <Reveal className="lg:col-span-5">
-          <span className="label-caps text-gold-dim">Integrated advisory</span>
-          <h2 className="display-title mt-3 text-[clamp(1.75rem,3.5vw,2.5rem)] text-navy-900">
+          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-dim">Integrated advisory</span>
+          <h2 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-3 text-[clamp(1.75rem,3.5vw,2.5rem)] text-navy-900">
             One business.
             <br />
             Multiple dimensions of risk.
@@ -111,7 +111,7 @@ export function Ecosystem() {
                   className="relative flex flex-col p-6 md:p-8"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <span className="stat-number text-6xl text-navy-900/10 md:text-7xl">
+                    <span className="font-sans font-bold tabular-nums tracking-[-0.04em] text-6xl text-navy-900/10 md:text-7xl">
                       {current.number}
                     </span>
                     <span className="flex size-12 items-center justify-center rounded-2xl bg-navy-900 text-gold-soft">

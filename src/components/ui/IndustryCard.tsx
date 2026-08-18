@@ -4,16 +4,16 @@ import { AtmosphericImage } from './AtmosphericImage'
 
 export function IndustryCard({ industry }: { industry: Industry }) {
   return (
-    <article className="industry-tile group relative isolate flex min-h-[260px] overflow-hidden bg-navy-900 text-white md:min-h-[320px]">
+    <article className="group relative isolate flex min-h-[260px] overflow-hidden bg-navy-900 text-white md:min-h-[320px]">
       <AtmosphericImage
         src={industry.image}
         alt=""
-        className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="absolute inset-0 size-full object-cover transition-transform duration-[800ms] group-hover:scale-[1.08]"
       />
       <div className="absolute inset-0 bg-navy-950/70 transition-colors duration-500 group-hover:bg-navy-950/50" />
       <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
       <div className="relative z-10 mt-auto flex w-full items-end justify-between gap-4 p-6 md:p-7">
-        <h3 className="display-title max-w-[16ch] text-xl md:text-2xl">
+        <h3 className="font-sans font-semibold leading-tight tracking-[-0.035em] max-w-[16ch] text-xl md:text-2xl">
           {industry.name}
         </h3>
         <span

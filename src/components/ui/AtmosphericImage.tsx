@@ -31,7 +31,7 @@ export function AtmosphericImage({
     <img
       src={src}
       alt={alt}
-      className={cn('image-modern', className)}
+      className={cn('saturate-[1.02] contrast-[1.01]', className)}
       loading={fetchPriority === 'high' ? 'eager' : 'lazy'}
       decoding="async"
       fetchPriority={fetchPriority}

@@ -57,7 +57,7 @@ export function AdvisoryIntro() {
       className="relative overflow-hidden bg-white py-12 md:py-14"
       id="content"
     >
-      <div className="container-page grid items-stretch gap-4 lg:grid-cols-2 lg:gap-5">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 grid items-stretch gap-4 lg:grid-cols-2 lg:gap-5">
           {/* Left — service cards */}
           <div className="order-2 grid grid-cols-2 grid-rows-2 gap-3 sm:gap-4 lg:order-1">
             {services.map((service, index) => {
@@ -90,7 +90,7 @@ export function AdvisoryIntro() {
                       </span>
                       <span
                         className={cn(
-                          'stat-number text-xl leading-none',
+                          'font-sans font-bold tabular-nums tracking-[-0.04em] text-xl leading-none',
                           theme.number,
                         )}
                       >
@@ -124,7 +124,7 @@ export function AdvisoryIntro() {
                 fetchPriority="high"
               />
               <div
-                className="hero-carousel-overlay absolute inset-0"
+                className="bg-[linear-gradient(to_right,rgba(7,20,40,0.88)_0%,rgba(7,20,40,0.72)_42%,rgba(7,20,40,0.35)_70%,rgba(7,20,40,0.2)_100%),linear-gradient(to_top,rgba(7,20,40,0.55)_0%,transparent_40%)] absolute inset-0"
                 aria-hidden
               />
               <div
@@ -133,8 +133,8 @@ export function AdvisoryIntro() {
               />
 
               <div className="relative flex size-full min-h-[300px] flex-col justify-end p-6 sm:min-h-[340px] sm:p-7 lg:min-h-[420px]">
-                <p className="label-caps text-gold-soft">Advisory</p>
-                <h2 className="display-title mt-2 max-w-sm text-balance text-[clamp(1.65rem,3vw,2.15rem)] text-white">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft">Advisory</p>
+                <h2 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-2 max-w-sm text-balance text-[clamp(1.65rem,3vw,2.15rem)] text-white">
                   Advisory that moves business forward.
                 </h2>
                 <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/75 sm:text-[0.9375rem]">

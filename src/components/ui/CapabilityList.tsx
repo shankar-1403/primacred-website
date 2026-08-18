@@ -1,4 +1,5 @@
 import { useId, useState } from 'react'
+import { cn } from '@/lib/cn'
 
 type CapabilityListProps = {
   items: readonly string[]
@@ -25,7 +26,7 @@ export function CapabilityList({ items, notes }: CapabilityListProps) {
         return (
           <li
             key={item}
-            className="capability-item border-t border-line-light first:border-t-0"
+            className="group border-t border-line-light first:border-t-0"
             data-open={isOpen}
           >
             <button
@@ -35,7 +36,7 @@ export function CapabilityList({ items, notes }: CapabilityListProps) {
               aria-expanded={isOpen}
             >
               <span className="flex min-w-0 items-baseline gap-4 md:gap-6">
-                <span className="stat-number w-8 shrink-0 text-sm text-gold">
+                <span className="font-sans font-bold tabular-nums tracking-[-0.04em] w-8 shrink-0 text-sm text-gold">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <span className="text-base font-semibold text-navy-900 md:text-lg">
@@ -46,7 +47,14 @@ export function CapabilityList({ items, notes }: CapabilityListProps) {
                 {isOpen ? 'Close' : 'View'}
               </span>
             </button>
-            <div className="capability-body">
+            <div
+              className={cn(
+                'grid transition-[grid-template-rows] duration-[350ms] ease-out',
+                isOpen
+                  ? 'grid-rows-[1fr]'
+                  : 'grid-rows-[0fr] group-hover:grid-rows-[1fr] group-focus-within:grid-rows-[1fr]',
+              )}
+            >
               <div className="overflow-hidden">
                 <p className="px-5 pb-5 pl-[3.25rem] text-sm leading-relaxed text-stone-600 md:px-6 md:pl-16">
                   {notes?.[item] ?? defaultNote}

@@ -16,8 +16,8 @@ export default function ServicesPage() {
         subtitle="Integrated expertise for complex business requirements."
         image="/images/pages/services.png"
       />
-      <section id="content" className="page-section py-14 md:py-16">
-        <div className="container-page relative">
+      <section id="content" className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#f7f8fa_0%,#eef1f5_48%,#faf6ef_100%)] before:pointer-events-none before:absolute before:-left-20 before:top-0 before:size-64 before:rounded-full before:bg-gold/14 before:blur-[64px] before:content-[''] after:pointer-events-none after:absolute after:-right-16 after:bottom-0 after:size-72 after:rounded-full after:bg-navy-900/8 after:blur-[64px] after:content-[''] py-14 md:py-16">
+        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 relative">
           <Reveal>
             <p className="max-w-2xl text-sm leading-relaxed text-stone-600 md:text-base">
               Financial performance, operational resilience and risk management

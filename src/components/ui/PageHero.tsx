@@ -37,8 +37,8 @@ export function PageHero({
       ) : (
         <div className="absolute inset-0 bg-navy-900" />
       )}
-      <div className="hero-carousel-overlay absolute inset-0" />
-      <div className="hero-carousel-grid pointer-events-none absolute inset-0 opacity-25" />
+      <div className="bg-[linear-gradient(to_right,rgba(7,20,40,0.58)_0%,rgba(7,20,40,0.46)_42%,rgba(7,20,40,0.18)_70%,rgba(7,20,40,0.08)_100%),linear-gradient(to_top,rgba(7,20,40,0.28)_0%,transparent_40%)] absolute inset-0" />
+      <div className="bg-[linear-gradient(to_right,rgba(212,188,150,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(212,188,150,0.08)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none absolute inset-0 opacity-25" />
       <div
         className="pointer-events-none absolute -right-24 top-1/3 size-80 rounded-full bg-gold/15 blur-3xl"
         aria-hidden
@@ -46,13 +46,13 @@ export function PageHero({
 
       <div
         className={cn(
-          'container-page relative z-10 flex flex-col justify-end',
+          'mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 relative z-10 flex flex-col justify-end',
           compact ? 'py-12 md:py-16' : 'py-16 md:py-24',
         )}
       >
         <div className="max-w-3xl">
           {eyebrow ? (
-            <span className="label-caps text-gold-soft">{eyebrow}</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft">{eyebrow}</span>
           ) : null}
           <SplitHeadline
             lines={titleLines}

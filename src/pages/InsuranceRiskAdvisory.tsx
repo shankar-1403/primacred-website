@@ -16,12 +16,12 @@ export default function InsuranceRiskAdvisory() {
         subtitle="Designing protection around actual business risk."
         image="/images/pages/insurance.png"
       />
-      <section id="content" className="page-section py-14 md:py-16">
-        <div className="container-page relative grid items-start gap-5 lg:grid-cols-12 lg:gap-6">
+      <section id="content" className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#f7f8fa_0%,#eef1f5_48%,#faf6ef_100%)] before:pointer-events-none before:absolute before:-left-20 before:top-0 before:size-64 before:rounded-full before:bg-gold/14 before:blur-[64px] before:content-[''] after:pointer-events-none after:absolute after:-right-16 after:bottom-0 after:size-72 after:rounded-full after:bg-navy-900/8 after:blur-[64px] after:content-[''] py-14 md:py-16">
+        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 relative grid items-start gap-5 lg:grid-cols-12 lg:gap-6">
           <Reveal className="lg:col-span-5">
-            <div className="navy-panel p-6 md:p-7">
-              <p className="relative label-caps text-gold-soft">Capabilities</p>
-              <h2 className="relative display-title mt-3 text-[clamp(1.6rem,3vw,2.15rem)] text-white">
+            <div className="relative isolate overflow-hidden rounded-2xl bg-navy-900 shadow-[0_16px_48px_rgba(15,33,64,0.18)] before:pointer-events-none before:absolute before:inset-0 before:bg-[linear-gradient(135deg,rgba(212,188,150,0.14)_0%,transparent_55%)] before:content-[''] p-6 md:p-7">
+              <p className="relative text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft">Capabilities</p>
+              <h2 className="relative font-sans font-semibold leading-tight tracking-[-0.035em] mt-3 text-[clamp(1.6rem,3vw,2.15rem)] text-white">
                 Protection aligned with the exposure.
               </h2>
             </div>
@@ -36,10 +36,10 @@ export default function InsuranceRiskAdvisory() {
           className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(212,188,150,0.12)_0%,transparent_50%)]"
           aria-hidden
         />
-        <div className="container-page relative">
+        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 relative">
           <Reveal>
-            <p className="label-caps text-gold-soft">Risk transfer</p>
-            <h2 className="display-title mt-3 text-[clamp(1.6rem,3vw,2.35rem)] text-white">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft">Risk transfer</p>
+            <h2 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-3 text-[clamp(1.6rem,3vw,2.35rem)] text-white">
               From exposure to resilience.
             </h2>
           </Reveal>
@@ -49,7 +49,7 @@ export default function InsuranceRiskAdvisory() {
                 key={step}
                 className="rounded-xl border border-white/10 bg-white/[0.06] p-5"
               >
-                <p className="stat-number text-sm text-gold/60">
+                <p className="font-sans font-bold tabular-nums tracking-[-0.04em] text-sm text-gold/60">
                   {String(index + 1).padStart(2, '0')}
                 </p>
                 <p className="mt-3 text-base font-semibold text-white">{step}</p>

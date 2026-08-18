@@ -20,7 +20,7 @@ export default function Contact() {
         image="/images/pages/contact.png"
       />
       <section id="content" className="bg-white py-14 md:py-16">
-        <div className="container-page grid gap-3 sm:gap-4 lg:grid-cols-12 lg:items-stretch">
+        <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 grid gap-3 sm:gap-4 lg:grid-cols-12 lg:items-stretch">
           {/* Left — image panel */}
           <Reveal className="h-full lg:col-span-5">
             <div className="relative isolate flex min-h-[300px] flex-col justify-end overflow-hidden rounded-2xl border border-line-light shadow-soft lg:min-h-full">
@@ -29,13 +29,13 @@ export default function Contact() {
                 alt="Modern workspace for advisory conversations"
                 className="absolute inset-0 size-full object-cover"
               />
-              <div className="cta-banner-overlay absolute inset-0" aria-hidden />
+              <div className="bg-[linear-gradient(to_right,rgba(7,20,40,0.94)_0%,rgba(7,20,40,0.82)_38%,rgba(15,33,64,0.65)_68%,rgba(15,33,64,0.5)_100%),linear-gradient(to_top,rgba(7,20,40,0.45)_0%,transparent_45%)] absolute inset-0" aria-hidden />
               <div
                 className="pointer-events-none absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-gold via-gold-soft to-transparent"
                 aria-hidden
               />
               <div className="relative p-6 md:p-7">
-                <p className="label-caps text-gold-soft">Conversation</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft">Conversation</p>
                 <p className="mt-3 text-sm leading-relaxed text-white/75 md:text-[0.9375rem]">
                   Whether you are evaluating a growth opportunity, restructuring
                   your financial position, strengthening risk management or
@@ -50,8 +50,8 @@ export default function Contact() {
           <Reveal className="lg:col-span-7" delay={0.08}>
             <div className="h-full overflow-hidden rounded-2xl border border-line-light bg-white shadow-soft">
               <div className="border-b border-line-light bg-gradient-to-r from-[#faf6ef] to-white px-6 py-5 md:px-8">
-                <p className="label-caps text-gold-dim">Enquiry form</p>
-                <h2 className="display-title mt-2 text-xl text-navy-900 md:text-2xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-dim">Enquiry form</p>
+                <h2 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-2 text-xl text-navy-900 md:text-2xl">
                   Tell us what you are working through.
                 </h2>
                 <p className="mt-2 text-sm text-stone-600">

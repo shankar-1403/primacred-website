@@ -38,11 +38,11 @@ export function ServicesSection() {
         aria-hidden
       />
 
-      <div className="container-page relative grid gap-10 lg:grid-cols-12 lg:gap-12">
+      <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 relative grid gap-10 lg:grid-cols-12 lg:gap-12">
         {/* Intro column */}
         <Reveal className="lg:col-span-4 lg:py-2">
-          <p className="label-caps text-gold-soft">Platform</p>
-          <h2 className="display-title mt-3 text-balance text-[clamp(1.75rem,3vw,2.5rem)] text-white">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft">Platform</p>
+          <h2 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-3 text-balance text-[clamp(1.75rem,3vw,2.5rem)] text-white">
             Our Advisory Platform
           </h2>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/65 md:text-base">
@@ -87,7 +87,7 @@ export function ServicesSection() {
 
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                        <span className="stat-number text-sm text-gold/50">
+                        <span className="font-sans font-bold tabular-nums tracking-[-0.04em] text-sm text-gold/50">
                           {service.number}
                         </span>
                         <h3 className="text-base font-semibold text-white md:text-lg">

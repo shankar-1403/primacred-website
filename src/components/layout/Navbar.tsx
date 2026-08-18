@@ -38,22 +38,25 @@ export function Navbar() {
           : 'bg-white/80 backdrop-blur-lg',
       )}
     >
-      <div className="container-page flex h-16 items-center justify-between gap-6 md:h-[4.5rem]">
-        <Logo onClick={closeMenu} />
+      <div className="mx-auto flex h-14 w-full max-w-[1320px] items-center justify-between gap-2 px-4 sm:h-16 sm:gap-4 sm:px-5 md:h-[4.5rem] md:px-8 lg:px-12">
+        <Logo
+          onClick={closeMenu}
+          className="ml-1 md:ml-0 [&_svg]:h-7 sm:[&_svg]:h-9 md:[&_svg]:h-11"
+        />
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {navLinks.map((link) => (
             <NavLink
               key={link.href}
               to={link.href}
-              className="nav-link rounded-lg px-3 py-2 hover:bg-cream"
+              className="relative rounded-lg px-3 py-2 text-sm font-medium text-stone-600 transition-colors hover:bg-cream hover:text-navy-900 aria-[current=page]:font-semibold aria-[current=page]:text-navy-900"
             >
               {link.label}
             </NavLink>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="shrink-0 flex items-center gap-2">
           <Link
             to={routes.contact}
             className="hidden items-center gap-2 rounded-xl bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white transition-all hover:bg-navy-800 hover:shadow-soft lg:inline-flex"
@@ -63,7 +66,7 @@ export function Navbar() {
           </Link>
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center rounded-xl bg-cream text-navy-900 lg:hidden"
+            className="inline-flex size-9 items-center justify-center rounded-lg bg-cream text-navy-900 sm:size-10 sm:rounded-xl lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? 'Close menu' : 'Open menu'}
@@ -74,25 +77,28 @@ export function Navbar() {
         </div>
       </div>
 
-      <div className="header-glow-line" aria-hidden />
+      <div className="h-0.5 w-full shrink-0 bg-[linear-gradient(90deg,rgb(184_149_106)_0%,rgb(184_149_106_/_0.55)_45%,transparent_100%)]" aria-hidden />
 
       <AnimatePresence>
         {open ? (
           <motion.nav
             id="mobile-nav"
-            className="border-t border-line-light bg-white lg:hidden"
+            className="overflow-hidden border-t border-line-light bg-white lg:hidden"
             aria-label="Mobile"
             initial={reduce ? false : { height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={reduce ? undefined : { height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              height: { duration: 0.5, ease: [0.25, 1, 0.5, 1] },
+              opacity: { duration: 0.35, ease: 'easeInOut' },
+            }}
           >
-            <div className="container-page flex flex-col gap-1 py-4">
+            <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-1 px-3 py-4 sm:px-5 md:px-8 lg:px-12">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.href}
                   to={link.href}
-                  className="rounded-xl px-3 py-3 text-base font-medium text-stone-600 hover:bg-cream hover:text-navy-900"
+                  className="block rounded-xl px-3 py-3 text-base font-medium text-stone-600 transition-colors hover:bg-cream hover:text-navy-900"
                   onClick={closeMenu}
                 >
                   {link.label}
@@ -100,7 +106,7 @@ export function Navbar() {
               ))}
               <Link
                 to={routes.contact}
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-navy-900 px-4 py-3 text-sm font-semibold text-white"
+                className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-navy-900 px-4 py-3 text-sm font-semibold text-white"
                 onClick={closeMenu}
               >
                 Start a Conversation
