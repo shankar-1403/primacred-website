@@ -5,7 +5,6 @@ import { AdvisoryIntro } from '@/components/sections/AdvisoryIntro'
 import { Ecosystem } from '@/components/sections/Ecosystem'
 import { ServicesSection } from '@/components/sections/Services'
 import { WhyPrimacredSection } from '@/components/sections/WhyPrimacred'
-import { InsightsTeaser } from '@/components/sections/Insights'
 import { CTASection } from '@/components/sections/CTA'
 import { seo } from '@/data/seo'
 
@@ -18,7 +17,7 @@ export default function Home() {
       <Ecosystem />
       <ServicesSection />
       <WhyPrimacredSection />
-      <InsightsTeaser />
+      {/* <InsightsTeaser /> */}
       <CTASection />
     </PageEnter>
   )

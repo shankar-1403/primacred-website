@@ -30,7 +30,7 @@ export const navLinks = [
   { label: 'Experience', href: routes.experience },
   { label: 'Industries', href: routes.industries },
   { label: 'Methodology', href: routes.methodology },
-  { label: 'Insights', href: routes.insights },
+  // { label: 'Insights', href: routes.insights },
 ] as const
 
 export const footerNav = navLinks

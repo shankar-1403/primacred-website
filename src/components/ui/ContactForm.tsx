@@ -1,5 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { Button } from './Button'
+import { db } from '@/lib/firebase'
+import { push, set, ref } from 'firebase/database'
 import { cn } from '@/lib/cn'
 
 type Fields = {
@@ -70,9 +72,18 @@ export function ContactForm({ embedded = false }: { embedded?: boolean }) {
 
     setStatus('submitting')
     try {
-      await new Promise((resolve) => setTimeout(resolve, 700))
-      setStatus('success')
+      const newRef = push(ref(db, 'contact_form'))
+      await set(newRef, {
+        name: values.name,
+        organisation: values.organisation,
+        designation: values.designation,
+        email: values.email,
+        phone: values.phone,
+        requirement: values.requirement,
+        createdAt: new Date().toISOString(),
+      })
       setValues(initial)
+      setStatus('success')
     } catch {
       setStatus('error')
     }
@@ -80,7 +91,7 @@ export function ContactForm({ embedded = false }: { embedded?: boolean }) {
 
   if (status === 'success') {
     return (
-      <div className={embedded ? '' : 'rounded-3xl border border-line-light bg-white shadow-card rounded-2xl px-8 py-12'} role="status">
+      <div className={embedded ? '' : 'border border-line-light bg-white shadow-card rounded-2xl px-8 py-12'} role="status">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-dim">Enquiry received</p>
         <h3 className="font-sans font-semibold leading-tight tracking-[-0.035em] mt-4 text-2xl text-navy-900">Thank you.</h3>
         <p className="mt-4 max-w-md leading-relaxed text-stone-600">
@@ -103,7 +114,7 @@ export function ContactForm({ embedded = false }: { embedded?: boolean }) {
       onSubmit={onSubmit}
       noValidate
       className={cn(
-        embedded ? 'space-y-5' : 'rounded-3xl border border-line-light bg-white shadow-card space-y-6 rounded-2xl p-8 md:p-10',
+        embedded ? 'space-y-5' : 'border border-line-light bg-white shadow-card space-y-6 rounded-2xl p-8 md:p-10',
       )}
     >
       <div className="grid gap-5 md:grid-cols-2">

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { MapPin, Phone, Mail } from 'lucide-react'
 import { Logo } from '@/components/ui/Logo'
 import { footerNav, routes } from '@/data/site'
 import { services } from '@/data/services'
@@ -57,16 +57,26 @@ export function Footer() {
           <p className="text-xs font-bold uppercase tracking-wider text-gold-soft">
             Contact
           </p>
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
-            Every business challenge starts with a conversation.
-          </p>
-          <Link
-            to={routes.contact}
-            className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-soft hover:text-white"
-          >
-            Start a Conversation
-            <ArrowRight className="size-4" strokeWidth={2} />
-          </Link>
+          <div className='flex gap-2 items-start mt-5'>
+            <div>
+              <MapPin className='w-4 h-4 text-gold-soft mt-1' />
+            </div>
+            <p className="max-w-xs text-sm leading-relaxed text-white/65">Lodha Supremus, 520, Off Mahakali Caves Rd,
+              Chakala Industrial Area (MIDC), Andheri East,
+              Mumbai, Maharashtra 400093</p>
+          </div>
+          <div className='flex gap-2 items-start mt-5'>
+            <div>
+              <Phone className='w-4 h-4 text-gold-soft mt-1' />
+            </div>
+            <a href='tel:+912235120060' className="max-w-xs text-sm leading-relaxed text-white/65">+91 22 3512 0060</a>
+          </div>
+          <div className='flex gap-2 items-start mt-5'>
+            <div>
+              <Mail className='w-4 h-4 text-gold-soft mt-1' />
+            </div>
+            <a href='info@pcred.in' className="max-w-xs text-sm leading-relaxed text-white/65">info@pcred.in</a>
+          </div>
         </div>
       </div>
 
