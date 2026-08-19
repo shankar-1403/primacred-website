@@ -61,9 +61,9 @@ export function Footer() {
             <div>
               <MapPin className='w-4 h-4 text-gold-soft mt-1' />
             </div>
-            <p className="max-w-xs text-sm leading-relaxed text-white/65">Lodha Supremus, 520, Off Mahakali Caves Rd,
+            <a href='https://maps.app.goo.gl/raoCwzJkMruiENqy9' target='_blank' className="max-w-xs text-sm leading-relaxed text-white/65">Lodha Supremus, 520, Off Mahakali Caves Rd,
               Chakala Industrial Area (MIDC), Andheri East,
-              Mumbai, Maharashtra 400093</p>
+              Mumbai, Maharashtra 400093</a>
           </div>
           <div className='flex gap-2 items-start mt-5'>
             <div>
