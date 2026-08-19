@@ -16,32 +16,32 @@ type StageCardConfig = {
 const stageCards: StageCardConfig[] = [
   {
     layout: 'md:col-span-5 md:row-span-2',
-    image: '/images/methodology/discover.png',
+    image: '/images/methodology/discover.webp',
     imageAlt: 'Discovery workshop and client consultation',
   },
   {
     layout: 'md:col-span-4 md:col-start-6',
-    image: '/images/methodology/assess.png',
+    image: '/images/methodology/assess.webp',
     imageAlt: 'Financial assessment and data review',
   },
   {
     layout: 'md:col-span-3 md:col-start-10',
-    image: '/images/methodology/analyse.png',
+    image: '/images/methodology/analyse.webp',
     imageAlt: 'Analysis of market and risk exposures',
   },
   {
     layout: 'md:col-span-7 md:col-start-6 md:row-start-2',
-    image: '/images/methodology/advise.png',
+    image: '/images/methodology/advise.webp',
     imageAlt: 'Strategic advisory session',
   },
   {
     layout: 'md:col-span-5 md:row-start-3',
-    image: '/images/methodology/implement.png',
+    image: '/images/methodology/implement.webp',
     imageAlt: 'Implementation and structured engagement',
   },
   {
     layout: 'md:col-span-7 md:col-start-6 md:row-start-3',
-    image: '/images/methodology/monitor.png',
+    image: '/images/methodology/monitor.webp',
     imageAlt: 'Long-term monitoring and resilience planning',
   },
 ]
@@ -99,7 +99,7 @@ export default function Methodology() {
         eyebrow="Methodology"
         titleLines={['From Complexity', 'to Clarity.']}
         subtitle="A disciplined six-stage approach to advisory."
-        image="/images/pages/methodology.png"
+        image="/images/pages/methodology.webp"
       />
       <section id="content" className="bg-white py-14 md:py-16">
         <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 grid gap-3 sm:gap-4 md:grid-cols-12 md:grid-rows-3">

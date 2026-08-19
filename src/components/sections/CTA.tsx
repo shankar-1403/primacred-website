@@ -5,7 +5,7 @@ import { routes } from '@/data/site'
 import { Reveal } from '@/components/ui/Reveal'
 import { AtmosphericImage } from '@/components/ui/AtmosphericImage'
 
-const ctaImage = '/images/sections/cta.png'
+const ctaImage = '/images/sections/cta.webp'
 const ctaVideo = '/videos/cta-city.mp4'
 
 export function CTASection() {

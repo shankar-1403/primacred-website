@@ -49,7 +49,7 @@ const cardThemes: Record<
   },
 }
 
-const sectionImage = '/images/sections/advisory.png'
+const sectionImage = '/images/sections/advisory.webp'
 
 export function AdvisoryIntro() {
   return (

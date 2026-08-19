@@ -22,7 +22,7 @@ export default function WhyPrimacred() {
         eyebrow="Why PRIMACRED"
         titleLines={['Advisory With Perspective.']}
         subtitle="Because the right answer starts with the right question."
-        image="/images/pages/why.png"
+        image="/images/pages/why.webp"
       />
       <section id="content" className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#f7f8fa_0%,#eef1f5_48%,#faf6ef_100%)] before:pointer-events-none before:absolute before:-left-20 before:top-0 before:size-64 before:rounded-full before:bg-gold/14 before:blur-[64px] before:content-[''] after:pointer-events-none after:absolute after:-right-16 after:bottom-0 after:size-72 after:rounded-full after:bg-navy-900/8 after:blur-[64px] after:content-[''] py-14 md:py-16">
         <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12 relative space-y-3">

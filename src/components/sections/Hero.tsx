@@ -12,28 +12,28 @@ const ROTATE_MS = 6000
 const slides = [
   {
     id: 'capital',
-    image: '/images/hero/capital.png',
+    image: '/images/hero/capital.webp',
     alt: 'Modern corporate architecture and financial district skyline',
     eyebrow: 'Finance · Risk · Growth',
     caption: 'Advisory for businesses navigating complexity.',
   },
   {
     id: 'infrastructure',
-    image: '/images/hero/infrastructure.png',
+    image: '/images/hero/infrastructure.webp',
     alt: 'Large-scale infrastructure and engineering project',
     eyebrow: 'Complex environments',
     caption: 'Experience across infrastructure and engineering.',
   },
   {
     id: 'strategy',
-    image: '/images/hero/strategy.png',
+    image: '/images/hero/strategy.webp',
     alt: 'Contemporary corporate office and strategic workspace',
     eyebrow: 'Strategic clarity',
     caption: 'Financial strength. Risk intelligence. Strategic clarity.',
   },
   {
     id: 'growth',
-    image: '/images/hero/growth.png',
+    image: '/images/hero/growth.webp',
     alt: 'Financial planning and business strategy environment',
     eyebrow: 'Sustainable growth',
     caption: 'Building stronger foundations for the road ahead.',

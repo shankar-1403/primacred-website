@@ -6,7 +6,7 @@ import { SEO } from '@/components/ui/SEO'
 import { CTASection } from '@/components/sections/CTA'
 import { seo } from '@/data/seo'
 
-const firmImage = '/images/pages/about-firm.png'
+const firmImage = '/images/pages/about-firm.webp'
 
 export default function About() {
   return (
@@ -16,7 +16,7 @@ export default function About() {
         eyebrow="About"
         titleLines={['A Different Perspective', 'on Advisory.']}
         subtitle="Financial strength. Risk intelligence. Strategic clarity."
-        image="/images/pages/about.png"
+        image="/images/pages/about.webp"
       />
       <section id="content" className="bg-white py-14 md:py-16">
         <div className="mx-auto w-full max-w-[1320px] px-5 md:px-8 lg:px-12">
@@ -110,7 +110,7 @@ export default function About() {
             >
               <article className="relative isolate flex h-full min-h-[160px] flex-col justify-center overflow-hidden rounded-2xl border border-gold-dim/25 bg-gradient-to-br from-[#f3ebe0] to-white p-5 shadow-soft md:min-h-full md:p-7">
                 <AtmosphericImage
-                  src="/images/pages/about.png"
+                  src="/images/pages/about.webp"
                   alt=""
                   className="absolute inset-0 size-full object-cover"
                 />

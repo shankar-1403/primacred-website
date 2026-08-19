@@ -6,34 +6,34 @@ export type Industry = {
 export const industries: Industry[] = [
   {
     name: 'Infrastructure',
-    image: '/images/industries/infrastructure.png',
+    image: '/images/industries/infrastructure.webp',
   },
   {
     name: 'Engineering',
-    image: '/images/industries/engineering.png',
+    image: '/images/industries/engineering.webp',
   },
   {
     name: 'Renewable Energy',
-    image: '/images/industries/renewable.png',
+    image: '/images/industries/renewable.webp',
   },
   {
     name: 'Manufacturing',
-    image: '/images/industries/manufacturing.png',
+    image: '/images/industries/manufacturing.webp',
   },
   {
     name: 'FMCG',
-    image: '/images/industries/fmcg.png',
+    image: '/images/industries/fmcg.webp',
   },
   {
     name: 'Mining',
-    image: '/images/industries/mining.png',
+    image: '/images/industries/mining.webp',
   },
   {
     name: 'Pharma',
-    image: '/images/industries/pharma.png',
+    image: '/images/industries/pharma.webp',
   },
   {
     name: 'Other Complex Business Environments',
-    image: '/images/industries/complex.png',
+    image: '/images/industries/complex.webp',
   },
 ]
