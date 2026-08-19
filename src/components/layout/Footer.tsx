@@ -75,7 +75,7 @@ export function Footer() {
             <div>
               <Mail className='w-4 h-4 text-gold-soft mt-1' />
             </div>
-            <a href='info@pcred.in' className="max-w-xs text-sm leading-relaxed text-white/65">info@pcred.in</a>
+            <a href='mailto:info@primacred.in' className="max-w-xs text-sm leading-relaxed text-white/65">info@primacred.in</a>
           </div>
         </div>
       </div>

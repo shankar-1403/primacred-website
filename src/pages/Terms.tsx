@@ -35,7 +35,7 @@ export default function Terms() {
                 Effective Date: 19 August 2026
               </p>
               <p className="text-sm leading-relaxed text-stone-600">
-                Welcome to the PrimaCred website,{' '}
+                Welcome to the Primacred website,{' '}
                 <a
                   href="https://primacred.in/"
                   className="font-medium text-navy-900 underline decoration-gold/40 underline-offset-2 hover:decoration-gold"
@@ -50,9 +50,9 @@ export default function Terms() {
               </p>
             </div>
 
-            <LegalSection title="1. About PrimaCred">
+            <LegalSection title="1. About Primacred">
               <p>
-                PrimaCred provides corporate advisory, financial consulting, and related business
+                Primacred provides corporate advisory, financial consulting, and related business
                 advisory services. The information available on this Website is provided for
                 general informational purposes and does not constitute a guarantee of any
                 financial, commercial, investment, or business outcome.
@@ -73,7 +73,7 @@ export default function Terms() {
             <LegalSection title="3. Information and Content">
               <p>
                 We make reasonable efforts to ensure that the information provided on the Website
-                is accurate and up to date. However, PrimaCred does not guarantee that all
+                is accurate and up to date. However, Primacred does not guarantee that all
                 information is complete, accurate, current, or error-free.
               </p>
               <p>
@@ -102,12 +102,12 @@ export default function Terms() {
             <LegalSection title="5. Intellectual Property">
               <p>
                 All content available on the Website, including text, graphics, logos, designs,
-                images, trademarks, and other materials, is owned by or licensed to PrimaCred
+                images, trademarks, and other materials, is owned by or licensed to Primacred
                 unless otherwise stated.
               </p>
               <p>
                 You may not reproduce, copy, modify, distribute, publish, or use such content for
-                commercial purposes without prior written permission from PrimaCred.
+                commercial purposes without prior written permission from Primacred.
               </p>
             </LegalSection>
 
@@ -118,7 +118,7 @@ export default function Terms() {
                 information.
               </p>
               <p>
-                PrimaCred will handle personal information in accordance with its Privacy Policy.
+                Primacred will handle personal information in accordance with its Privacy Policy.
               </p>
             </LegalSection>
 
@@ -135,7 +135,7 @@ export default function Terms() {
 
             <LegalSection title="8. Limitation of Liability">
               <p>
-                To the maximum extent permitted by applicable law, PrimaCred shall not be liable
+                To the maximum extent permitted by applicable law, Primacred shall not be liable
                 for any direct, indirect, incidental, consequential, or other loss arising from
                 the use of, or reliance on, information available through the Website.
               </p>
@@ -147,7 +147,7 @@ export default function Terms() {
 
             <LegalSection title="9. Indemnification">
               <p>
-                You agree to indemnify and hold PrimaCred, its directors, employees,
+                You agree to indemnify and hold Primacred, its directors, employees,
                 representatives, and affiliates harmless from claims, losses, damages, or
                 expenses arising from your misuse of the Website or violation of these Terms
                 &amp; Conditions.
@@ -156,7 +156,7 @@ export default function Terms() {
 
             <LegalSection title="10. Changes to These Terms">
               <p>
-                PrimaCred may update or modify these Terms &amp; Conditions from time to time.
+                Primacred may update or modify these Terms &amp; Conditions from time to time.
                 Updated terms will be posted on this page with the revised effective date.
               </p>
               <p>
@@ -183,7 +183,7 @@ export default function Terms() {
                 us through the details provided below.
               </p>
               <div className="rounded-xl border border-line-light bg-cream/50 p-4 text-sm text-stone-600">
-                <p className="font-semibold text-navy-900">PrimaCred</p>
+                <p className="font-semibold text-navy-900">Primacred</p>
                 <p className="mt-2">
                   Website:{' '}
                   <a

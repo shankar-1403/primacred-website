@@ -35,7 +35,7 @@ export default function Privacy() {
                 Effective Date: 19 August 2026
               </p>
               <p className="text-sm leading-relaxed text-stone-600">
-                PrimaCred (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) respects your privacy and is
+                Primacred (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) respects your privacy and is
                 committed to protecting the information you provide through our website,{' '}
                 <a
                   href="https://primacred.in/"
@@ -56,7 +56,8 @@ export default function Privacy() {
               </p>
               <ul className="list-disc space-y-1 pl-5">
                 <li>Name</li>
-                <li>Company name</li>
+                <li>Organisation</li>
+                <li>Designation</li>
                 <li>Phone number</li>
                 <li>Email address</li>
                 <li>Business requirements or enquiry details</li>
@@ -80,12 +81,12 @@ export default function Privacy() {
             </LegalSection>
 
             <LegalSection title="3. Information Sharing">
-              <p>
-                PrimaCred does not sell, rent, trade, or share your personal information with
+              <p className='font-bold'>
+                Primacred does not sell, rent, trade, or share your personal information with
                 third parties for commercial or marketing purposes.
               </p>
               <p>
-                Information provided to us is used solely for legitimate PrimaCred business
+                Information provided to us is used solely for legitimate Primacred business
                 purposes and to respond to your requests.
               </p>
               <p>
@@ -133,7 +134,7 @@ export default function Privacy() {
 
             <LegalSection title="8. Changes to This Privacy Policy">
               <p>
-                PrimaCred may update this Privacy Policy from time to time. Any changes will
+                Primacred may update this Privacy Policy from time to time. Any changes will
                 be posted on this page with the updated effective date.
               </p>
             </LegalSection>
@@ -145,7 +146,7 @@ export default function Privacy() {
                 below.
               </p>
               <div className="rounded-xl border border-line-light bg-cream/50 p-4 text-sm text-stone-600">
-                <p className="font-semibold text-navy-900">PrimaCred</p>
+                <p className="font-semibold text-navy-900">Primacred</p>
                 <p className="mt-2">
                   Website:{' '}
                   <a
